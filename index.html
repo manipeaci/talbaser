@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="katex.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="header">
+        <div id="pick">
+            <label for="bases">Välj bas: </label>
+            <select name="bases" id="base_selection">
+                <option value="2">Bas-2</option>
+                <option value="3">Bas-3</option>
+                <option value="4">Bas-4</option>
+                <option value="5">Bas-5</option>
+                <option value="6">Bas-6</option>
+                <option value="7">Bas-7</option>
+                <option value="8">Bas-8</option>
+                <option value="9">Bas-9</option>
+                <option value="10">Bas-10</option>
+                <option value="11">Bas-11</option>
+                <option value="12">Bas-12</option>
+                <option value="13">Bas-13</option>
+                <option value="14">Bas-14</option>
+                <option value="15">Bas-15</option>
+                <option value="16">Bas-16</option>
+            </select>
+            <button id="base_create">Skapa</button>
+        </div>
+
+        <div id="buttons">
+            <button id="plus">+</button>
+            <button id="minus">-</button>
+        </div>
+    </div>
+
+    <div id="parent"></div>
+
+
+    <script defer src="katex.min.js"
+        integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4"></script>
+
+    <script src="anime.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

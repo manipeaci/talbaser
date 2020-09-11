@@ -1,0 +1,246 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+*:focus {
+    outline: none;
+}
+
+body {
+    background-color: lightgrey;
+    margin: 10px;
+    margin-top: 90px;
+}
+
+.number {
+    width: 50px;
+    height: 50px;
+    margin: 1px;
+    font-size: 30px;
+    font-family: 'Roboto Mono';
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    color: #444444;
+    transition: 0.5s all;
+    flex-shrink: 3;
+}
+
+.number:hover {
+    color: #2f226f;
+    transform: scale(1.1);
+    text-shadow: 5px 5px 5px #989898;
+}
+
+.number.selected:hover {
+    border-radius: 2px;
+    transform: scale(1);
+    text-shadow: none;
+    color: white;
+}
+
+.number.selected {
+    width: 70px;
+    height: 70px;
+    font-size: 50px;
+    /* border-top: 5px solid black; */
+    /* border-bottom: 5px solid black; */
+    color: #ffffff;
+    box-sizing: border-box;
+}
+
+#parent {
+    background-color: lightgrey;
+    height: auto;
+    display: flex;
+    width: auto;
+    overflow: hidden;
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    flex-wrap: wrap;
+}
+#parent > * {
+    background-color: white;
+    height: 500px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    margin: 5px;
+    box-sizing: border-box;
+    border: 10px solid black;
+    min-width: auto;
+    flex-shrink: 3;
+}
+
+#parent > *::after {
+    background: rgb(92, 67, 255);
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+    height: 60px;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    top: 41%;
+    content: "";
+    pointer-events: none; 
+    z-index: 0;
+}
+
+.numbers {
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    opacity: 0;
+    z-index: 2;
+}
+
+
+#plus, #minus {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    border: 1px solid rgb(36, 143, 97);
+    text-align: center;
+    border-radius: 10px;
+    background: rgb(44, 182, 122);
+    font-size: 50px;
+    line-height: 25px;
+    color: white;
+    transition: all 0.2s;
+    outline: none;
+}
+
+
+#plus:hover, #minus:hover {
+    background: rgb(42, 171, 115);
+    transform: scale(1.1) translateY(2px);
+    box-shadow: 0px 6px 6px rgba(0,0,0,0.2);
+}
+
+#plus:active {
+    transform: scale(0.9) translateY(2px); 
+    background: rgb(255, 162, 0);  
+}
+
+
+#buttons {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    justify-content: space-between;
+    width: auto;
+}
+
+
+#current {
+    font-size: 20px;
+}
+
+
+.numberheader {
+    height: 50px;
+    width: 100%;
+    background-color: lightgrey;
+    position: absolute;
+    opacity: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.25s;
+    font-family: 'Roboto Mono';
+    padding-left: 20px;
+    box-sizing: border-box;
+    font-size: 30px;
+    z-index: 3;
+}
+
+.numberheader:hover > .close, .numberheader:hover > .showExpl {
+    opacity: 1;
+}
+
+.close {
+    height: 30px;
+    width: 30px;
+    background: #b02626;
+    color: white;
+    border: 0px;
+    border-radius: 5px;
+    margin: 5px;
+    opacity: 0;
+    transition: all 0.25s;
+}
+
+.close:hover {
+    background: #631414;
+}
+
+.showExpl {
+    height: 30px;
+    width: 30px;
+    background: rgb(44, 182, 122);
+    color: white;
+    border: 0px;
+    border-radius: 5px;
+    margin: 5px;
+    opacity: 0;
+    transition: all 0.25s;
+    z-index: 0;
+}
+
+.showExpl:hover {
+    background: rgb(21, 89, 60);
+}
+
+.expl {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    margin: 0px;
+    padding: 10px;
+    background-color: lightgrey;
+    width: 100%;
+    height: auto;
+    font-size: 20px;
+    display: none;
+    z-index: 4;
+}
+
+
+#header {
+    height: auto;
+    padding: 20px;
+    font-family: 'Roboto Mono';
+    font-weight: bold;
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    transition: all 0.25s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+
+#header:hover {
+    opacity: 1;
+}
+
+
+#header select, #header button {
+    font-family: 'Roboto Mono';
+}
+
+.coefficiants {
+    color: rgb(255, 255, 255);
+    background-color: rgb(92, 67, 255);
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+}
